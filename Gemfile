@@ -13,6 +13,7 @@ group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
   gem 'spring'
+  gem 'letter_opener_web'
 end
 
 gem 'twitter-bootstrap-rails'
