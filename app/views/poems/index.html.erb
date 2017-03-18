@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Content</th>
+      <th>Auther</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @poem.each do |poem| %>
+      <tr>
+        <td><%= poem.title %></td>
+        <td><%= poem.content %></td>
+        <td><%= poem.auther %></td>
+        <td><%= link_to 'Show', poem %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
