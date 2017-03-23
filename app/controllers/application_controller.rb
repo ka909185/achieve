@@ -7,9 +7,9 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   #変数PERMISSIBLE_ATTRIBUTESに配列[:name]を代入
-  PERMISSIBLE_ATTRIBUTES = %i(name)
+  PERMISSIBLE_ATTRIBUTES = %i(name avatar avatar_cache)
 
-  protected
+  private
 
   #deviseのストロングパラメーターにカラム追加するメソッドを定義
   def configure_permitted_parameters
