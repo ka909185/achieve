@@ -5,7 +5,10 @@
       <%= link_to "ブログを作成する", new_blog_path, class: 'btn btn-default' %>
     <% @blog.each do |blog| %>
     <div class="row">
-      <h4><strong><%= blog.title %></strong></h4>
+      <%= link_to blog_path(blog) do %>
+        <h4><strong><%= blog.title %></strong></h4>
+      <% end %>
+
       <p><%= blog.content %></p>
       <p><%= blog.user.name %></p>
       <p><%= profile_img(blog.user) %></p>
