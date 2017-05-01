@@ -1,5 +1,6 @@
 class CommentsController < ApplicationController
   # コメントを保存、投稿するためのアクションです。
+  # vvvv
   def create
     # Blogをパラメータの値から探し出し,Blogに紐づくcommentsとしてbuildします。
     @comment = current_user.comments.build(comment_params)
